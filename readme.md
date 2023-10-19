@@ -22,6 +22,8 @@ Explain how to use the plugin after it has been installed and activated. Include
 
 
 ## Changelog
+- 1.0.5
+    - Added hook removal to remove the old MarkerIo
 - 1.0.4
     - Minor bug fixes
 - 1.0.3
