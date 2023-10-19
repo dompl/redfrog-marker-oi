@@ -13,7 +13,7 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-require_once plugin_dir_path( __FILE__ ) . '/updates-checker.php';
+require_once plugin_dir_path( __FILE__ ) . 'updates-checker.php';
 
 $myUpdateChecker = new MyGitHubPluginUpdater( __FILE__, 'dompl', pathinfo( wp_basename( __FILE__ ), PATHINFO_FILENAME ) );
 
