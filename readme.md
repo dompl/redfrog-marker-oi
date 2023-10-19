@@ -22,15 +22,13 @@ Explain how to use the plugin after it has been installed and activated. Include
 
 
 ## Changelog
+- 1.0.4
+    - Minor bug fixes
 - 1.0.3
     - Minor bug fixes
 - 1.0.2
     - Minor bug fixes
-- 1.0.1
-    - Minor bug fixes
-- 1.0.0
-    - Initial release
-
+    
 ## Contributing
 
 Please create an issue in the GitHub repository if you find a bug or have a feature request.

@@ -3,7 +3,7 @@
  * Plugin Name:       MarkerIO Integration
  * Plugin URI:        https://redfrogstudio.co.uk/markerio-plugin
  * Description:       This plugin integrates MarkerIO functionality into WordPress.
- * Version:           1.0.3
+ * Version:           1.0.4
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            Dom Kapelewski
@@ -13,7 +13,7 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-require_once plugin_dir_path( __FILE__ ) . 'mygithub-pluginup-dater';
+require_once plugin_dir_path( __FILE__ ) . 'mygithub-pluginup-dater.php';
 
 $myUpdateChecker = new MyGitHubPluginUpdater( __FILE__, 'dompl', pathinfo( wp_basename( __FILE__ ), PATHINFO_FILENAME ) );
 
