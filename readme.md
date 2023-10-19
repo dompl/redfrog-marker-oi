@@ -22,6 +22,8 @@ Explain how to use the plugin after it has been installed and activated. Include
 
 
 ## Changelog
+- 1.0.3
+    - Minor bug fixes
 - 1.0.2
     - Minor bug fixes
 - 1.0.1
