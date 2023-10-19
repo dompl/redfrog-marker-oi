@@ -3,7 +3,7 @@
  * Plugin Name:       MarkerIO Integration
  * Plugin URI:        https://redfrogstudio.co.uk/markerio-plugin
  * Description:       This plugin integrates MarkerIO functionality into WordPress.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            Dom Kapelewski
