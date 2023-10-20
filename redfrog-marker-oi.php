@@ -3,7 +3,7 @@
  * Plugin Name:       MarkerIO Integration
  * Plugin URI:        https://redfrogstudio.co.uk/markerio-plugin
  * Description:       This plugin integrates MarkerIO functionality into WordPress.
- * Version:           1.0.5
+ * Version:           1.0.6
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            Dom Kapelewski
@@ -62,7 +62,26 @@ class KsMarkerIoIntegration {
     public function MarkerIooutputHtml() {
         $markerIOKey = get_option( 'ks_marker_io' );
         if ( $markerIOKey && isset( $_COOKIE['bug'] ) || isset( $_GET['bug'] ) ) {
-            $html = '<script>window.markerConfig = {project: \'' . $markerIOKey . '\',source: \'snippet\'};</script>';
+            $html = "<script>window.markerConfig = {";
+            $html .= "project:'{$markerIOKey}',
+                      source: 'snippet'";
+
+            if ( is_user_logged_in() ) {
+                $current_user = wp_get_current_user();
+                $email        = $current_user->user_email;
+                $fullName     = $current_user->display_name;
+                $html .= ", reporter: {
+                            email: '$email',
+                            fullName: '$fullName',
+                        }";
+            }
+
+            $ipAddress = $_SERVER['REMOTE_ADDR'];
+            $html .= ", customData: {
+                        ipAddress: '$ipAddress',
+                      }";
+
+            $html .= "};</script>{";
             $html .= '<script>!function(e,r,a){if(!e.__Marker){e.__Marker={};var t=[],n={__cs:t};["show","hide","isVisible","capture","cancelCapture","unload","reload","isExtensionInstalled","setReporter","setCustomData","on","off"].forEach(function(e){n[e]=function(){var r=Array.prototype.slice.call(arguments);r.unshift(e),t.push(r)}}),e.Marker=n;var s=r.createElement("script");s.async=1,s.src="https://edge.marker.io/latest/shim.js";var i=r.getElementsByTagName("script")[0];i.parentNode.insertBefore(s,i)}}(window,document);</script>';
             echo $html;
         }
