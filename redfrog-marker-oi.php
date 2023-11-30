@@ -3,7 +3,7 @@
  * Plugin Name:       MarkerIO Integration
  * Plugin URI:        https://redfrogstudio.co.uk/markerio-plugin
  * Description:       This plugin integrates MarkerIO functionality into WordPress.
- * Version:           1.0.6
+ * Version:           1.0.7
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            Dom Kapelewski
@@ -81,7 +81,7 @@ class KsMarkerIoIntegration {
                         ipAddress: '$ipAddress',
                       }";
 
-            $html .= "};</script>{";
+            $html .= "};</script>";
             $html .= '<script>!function(e,r,a){if(!e.__Marker){e.__Marker={};var t=[],n={__cs:t};["show","hide","isVisible","capture","cancelCapture","unload","reload","isExtensionInstalled","setReporter","setCustomData","on","off"].forEach(function(e){n[e]=function(){var r=Array.prototype.slice.call(arguments);r.unshift(e),t.push(r)}}),e.Marker=n;var s=r.createElement("script");s.async=1,s.src="https://edge.marker.io/latest/shim.js";var i=r.getElementsByTagName("script")[0];i.parentNode.insertBefore(s,i)}}(window,document);</script>';
             echo $html;
         }
